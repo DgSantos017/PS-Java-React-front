@@ -1,0 +1,1 @@
+export const FilterTransfer = () => <h1> AQUI VAI TER O FILTRO </h1>

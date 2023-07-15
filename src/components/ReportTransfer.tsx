@@ -1,0 +1,1 @@
+export const ReportTransfer = () => <h1> AQUI VAI TER OS RESULTADOS DO FILTRO </h1>
