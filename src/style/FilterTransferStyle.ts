@@ -1,4 +1,15 @@
 import styled from 'styled-components'
+import DatePicker from 'react-datepicker'
+import 'react-datepicker/dist/react-datepicker.css'
+
+export const CustomDatePicker = styled(DatePicker)`
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 200px;
+  outline: none;
+`;
 
 export const Form = styled.form`
   display: flex;

@@ -1,16 +1,18 @@
-import { Form, BoxField, InputField, Span, ButtonSearch } from '../style/FilterTransferStyle'
+import { Form, BoxField, InputField, Span, ButtonSearch, CustomDatePicker } from '../style/FilterTransferStyle'
 import { useState } from 'react'
 import axios from 'axios'
 import { useTransfersContext } from '../contexts/Transferencs';
-import { compareAsc, format } from 'date-fns'
+import { format } from 'date-fns'
+import DatePicker from "react-datepicker"
+import "react-datepicker/dist/react-datepicker.css"
 
 export const FilterTransfer = () => {
 
     const { setData } = useTransfersContext();
 
-     const [startDate, setStartDate] = useState('');
-     const [endDate, setEndDate] = useState('');
-     const [transactionOperatorName, setTtransactionOperatorName] = useState('');
+     const [startDate, setStartDate] = useState(new Date())
+     const [endDate, setEndDate] = useState(new Date())
+     const [transactionOperatorName, setTtransactionOperatorName] = useState('')
      const [numberAccount, setNumberAccount] = useState('')
      
      const urlLocal = 'http://localhost:8080/transfers/'
@@ -35,17 +37,11 @@ export const FilterTransfer = () => {
  
     return <Form>
         <BoxField>
-            <InputField 
-                value={startDate}
-                onChange={e => setStartDate(e.target.value)} 
-            />
+            <CustomDatePicker selected={startDate} onChange={(date) => setStartDate(date)} />
             <Span> Data de inicio </Span>
         </BoxField>
         <BoxField>
-            <InputField
-                value={endDate}
-                onChange={e => setEndDate(e.target.value)}
-            />
+            <CustomDatePicker selected={endDate} onChange={(date) => setStartDate(date)} />
             <Span> Data de Fim </Span>
         </BoxField>
         <BoxField>

@@ -8,8 +8,8 @@ export const ReportTransfer = () => {
 
     return <ContainerReport>
         <BoxSaldo>
-            <Info> Saldo no total: {data[0].totalBalance} </Info>
-            <Info> Saldo no periodo: {data[0].balanceInPeriod} </Info>
+            <Info> Saldo no total: {data.totalBalance} </Info>
+            <Info> Saldo no periodo: {data.balanceInPeriod} </Info>
         </BoxSaldo>
         <BoxDados>
             <TR>
@@ -19,12 +19,12 @@ export const ReportTransfer = () => {
                 <TD> Nome do operador transicionado </TD>
             </TR>
             {data.map((item) => (
-          <TR key={item.id}>
-            <TD>{item.transferDate}</TD>
-            <TD>{item.value}</TD>
-            <TD>{item.type}</TD>
-            <TD>{item.transactionOperatorName}</TD>
-          </TR>
+            <TR key={item.id}>
+                <TD>{item.transferDate}</TD>
+                <TD>{item.value}</TD>
+                <TD>{item.type}</TD>
+                <TD>{item.transactionOperatorName}</TD>
+            </TR>
         ))}
         </BoxDados>
         <BoxPaginacao>
