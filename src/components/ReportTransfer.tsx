@@ -4,11 +4,12 @@ import { useTransfersContext } from '../contexts/Transferencs'
 export const ReportTransfer = () => {
 
     const { data } = useTransfersContext();
+    console.log(data)
 
     return <ContainerReport>
         <BoxSaldo>
-            <Info> Saldo no total: 50 conto </Info>
-            <Info> Saldo no periodo: 50 conto </Info>
+            <Info> Saldo no total: {data[0].totalBalance} </Info>
+            <Info> Saldo no periodo: {data[0].balanceInPeriod} </Info>
         </BoxSaldo>
         <BoxDados>
             <TR>

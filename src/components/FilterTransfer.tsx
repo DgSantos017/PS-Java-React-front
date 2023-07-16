@@ -2,6 +2,7 @@ import { Form, BoxField, InputField, Span, ButtonSearch } from '../style/FilterT
 import { useState } from 'react'
 import axios from 'axios'
 import { useTransfersContext } from '../contexts/Transferencs';
+import { compareAsc, format } from 'date-fns'
 
 export const FilterTransfer = () => {
 
@@ -9,7 +10,7 @@ export const FilterTransfer = () => {
 
      const [startDate, setStartDate] = useState('');
      const [endDate, setEndDate] = useState('');
-     const [operatorName, setOperatorName] = useState('');
+     const [transactionOperatorName, setTtransactionOperatorName] = useState('');
      const [numberAccount, setNumberAccount] = useState('')
      
      const urlLocal = 'http://localhost:8080/transfers/'
@@ -18,12 +19,11 @@ export const FilterTransfer = () => {
      const handleSearch = async (event: any) => {
         event.preventDefault();
 
-        await axios.get(`${urlDeploy}${numberAccount}`, {
-            params: {
-                startDate: startDate,
-                endDate: endDate,
-                transactionOperatorName: operatorName
-            }
+        const formattedStartDate = format(new Date(startDate), 'yyyy-MM-dd\'T\'HH:mm:ss');
+        const formattedEndDate = format(new Date(endDate), 'yyyy-MM-dd\'T\'HH:mm:ss');
+
+        await axios.get(`${urlDeploy}${numberAccount}`, { 
+            params: { startDate: formattedStartDate, endDate: formattedEndDate, transactionOperatorName } 
         })
         .then((response) => {
             setData(response.data)
@@ -50,8 +50,8 @@ export const FilterTransfer = () => {
         </BoxField>
         <BoxField>
             <InputField 
-                value={operatorName}
-                onChange={e => setOperatorName(e.target.value)}
+                value={transactionOperatorName}
+                onChange={e => setTtransactionOperatorName(e.target.value)}
             />
             <Span> Nome do operador transacionado </Span>
         </BoxField>
