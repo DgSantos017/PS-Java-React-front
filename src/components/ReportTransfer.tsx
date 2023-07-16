@@ -1,6 +1,10 @@
 import { ContainerReport, BoxDados, BoxPaginacao, BoxSaldo, Info, Button, TR, TD } from '../style/FilterReportStyle'
+import { useTransfersContext } from '../contexts/Transferencs'
 
 export const ReportTransfer = () => {
+
+    const { data } = useTransfersContext();
+
     return <ContainerReport>
         <BoxSaldo>
             <Info> Saldo no total: 50 conto </Info>
@@ -13,12 +17,14 @@ export const ReportTransfer = () => {
                 <TD> Tipo </TD>
                 <TD> Nome do operador transicionado </TD>
             </TR>
-            <TR>
-                <TD> 11/01/97 </TD>
-                <TD> 7.800 reais </TD>
-                <TD> Deposito </TD>
-                <TD> Diogo </TD>
-            </TR>
+            {data.map((item) => (
+          <TR key={item.id}>
+            <TD>{item.transferDate}</TD>
+            <TD>{item.value}</TD>
+            <TD>{item.type}</TD>
+            <TD>{item.transactionOperatorName}</TD>
+          </TR>
+        ))}
         </BoxDados>
         <BoxPaginacao>
             <Button> &lt; </Button> 

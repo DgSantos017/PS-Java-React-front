@@ -17,6 +17,8 @@ align-items: center;
 export const Span = styled.label`
  
 margin-top: 10px;
+position: relative;
+top: -70px;
 `;
 
 export const InputField = styled.input`
@@ -24,7 +26,7 @@ padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 16px;
-  width: 300px;
+  width: 200px;
   outline: none;
  
  

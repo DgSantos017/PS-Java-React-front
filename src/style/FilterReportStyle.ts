@@ -46,14 +46,15 @@ cursor: pointer;
 `;
 
 export const TR = styled.tr`
-width: 100%;
+
 `;
 
 
 export const TD = styled.td`
-width: 25%;
-border: none;
+
+width: 500px;
+height: 30px;
 border: 1px solid black;
-margin: 0;
+align-items: center;
 `;
 
