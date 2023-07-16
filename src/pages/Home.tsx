@@ -1,11 +1,10 @@
 import { FilterTransfer } from '../components/FilterTransfer'
-import { ReportTransfer } from '../components/ReportTransfer'
+import { SectionBody } from '../style/HomeStyle'
 
 export const Home = () => {
-    return <>
-        <h1> AQUI VAI TER A PAGINA INICIAL </h1>
+    return <SectionBody>
         <FilterTransfer />
-        <ReportTransfer />
-    </>
+        <FilterTransfer />
+    </SectionBody>
     
 }

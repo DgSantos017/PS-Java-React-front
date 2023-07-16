@@ -1,1 +1,16 @@
-export const ReportTransfer = () => <h1> AQUI VAI TER OS RESULTADOS DO FILTRO </h1>
+import { ContainerReport, BoxDados, BoxPaginacao, BoxSaldo } from '../style/FilterReportStyle'
+
+export const ReportTransfer = () => {
+    return <ContainerReport>
+        <BoxSaldo>
+
+        </BoxSaldo>
+        <BoxDados>
+
+        </BoxDados>
+
+        <BoxPaginacao>
+
+        </BoxPaginacao>
+    </ContainerReport>
+}
