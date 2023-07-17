@@ -1,5 +1,6 @@
 import { ContainerReport, BoxDados, BoxSaldo, TableData, TableHeader, Table } from '../style/FilterReportStyle'
 import { useTransfersContext } from '../contexts/Transferencs'
+import { format } from 'date-fns'
 
 export const ReportTransfer = () => {
 
@@ -24,7 +25,9 @@ export const ReportTransfer = () => {
               <tbody>
                 {data.map((item, index) => (
                   <tr key={item.id}>
-                    <TableData oddRow={index % 2 === 0}>{item.transferDate}</TableData>
+                    <TableData oddRow={index % 2 === 0}>
+                      {format(new Date(item.transferDate), 'dd/MM/yyyy HH:mm')}
+                    </TableData>
                     <TableData oddRow={index % 2 === 0}>{item.value}</TableData>
                     <TableData oddRow={index % 2 === 0}>{item.type}</TableData>
                     <TableData oddRow={index % 2 === 0}>{item.transactionOperatorName}</TableData>
