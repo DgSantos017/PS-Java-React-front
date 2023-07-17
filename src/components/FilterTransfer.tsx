@@ -9,8 +9,8 @@ export const FilterTransfer = () => {
 
     const { setData } = useTransfersContext()
 
-     const [ startDate, setStartDate] = useState<Date | null>(null)
-     const [ endDate, setEndDate] = useState<Date | null>(null)
+     const [ startDate, setStartDate] = useState<any>(null)
+     const [ endDate, setEndDate] = useState<any>(null)
      const [ transactionOperatorName, setTtransactionOperatorName] = useState('')
      const [ numberAccount, setNumberAccount ] = useState('')
      const [ type, setType ] = useState('')
@@ -53,11 +53,11 @@ export const FilterTransfer = () => {
     return <Form>
         <LadoEsquerdo>
             <BoxField>
-                <CustomDatePicker selected={startDate} onChange={(date) => setStartDate(date)} />
+                <CustomDatePicker selected={startDate} onChange={date => setStartDate(date)} />
                 <Span> Data de inicio </Span>
             </BoxField>
             <BoxField>
-                <CustomDatePicker selected={endDate} onChange={(date) => setEndDate(date)} />
+                <CustomDatePicker selected={endDate} onChange={date => setEndDate(date)} />
                 <Span> Data de Fim </Span>
             </BoxField>
             <BoxField>
