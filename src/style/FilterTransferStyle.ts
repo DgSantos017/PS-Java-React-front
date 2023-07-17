@@ -1,17 +1,21 @@
-import styled from 'styled-components'
-import DatePicker from 'react-datepicker'
-import 'react-datepicker/dist/react-datepicker.css'
+import styled from 'styled-components';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
+
+const primaryColor = '#EDEDED';
+const secondaryColor = '#6C757D';
+const accentColor = '#007BFF';
 
 export const CustomDatePicker = styled(DatePicker)`
   padding: 10px;
   border: none;
   border-radius: 8px;
   font-size: 16px;
-  width: 200px;
+  width: 85px;
   outline: none;
-  background-color: #2b1c24;
+  background-color: ${primaryColor};
   padding-left: 10px;
-  color: white;
+  color: ${secondaryColor};
   margin-bottom: 10px;
   text-align: center;
 `;
@@ -25,49 +29,43 @@ export const Form = styled.form`
 `;
 
 export const BoxField = styled.section`
-display: flex;
-flex-direction: column;
-align-items: center;
-margin-top: 10px;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
 `;
 
 export const Span = styled.label`
- 
-margin-top: 10px;
-position: relative;
-top: -80px;
-color: white;
+  margin-top: 10px;
+  position: relative;
+  top: -80px;
+  color: ${secondaryColor};
 `;
 
 export const InputField = styled.input`
-padding: 10px;
+  padding: 10px;
   border: none;
   border-radius: 8px;
   font-size: 16px;
-  width: 200px;
+  width: 100px;
   outline: none;
-  background-color: #2b1c24;
+  background-color: ${primaryColor};
   padding-left: 10px;
-  color: white;
+  color: ${secondaryColor};
   margin-bottom: 10px;
   text-align: center;
 `;
-export const ButtonSearch = styled.button`
-display: inline-block;
-padding: 12px 24px;
-background-color: #CCC;
-color: #0e0005;
-border: none;
-border-radius: 8px;
-font-size: 16px;
-cursor: pointer;
-transition: background-color 0.3s ease;
-`;
 
-export const BoxFields = styled.section`
-    display: flex;
-    flex-direction: column;
+export const ButtonSearch = styled.button`
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: ${accentColor};
+  color: ${primaryColor};
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 `;
 
 export const Select = styled.select`
@@ -75,10 +73,10 @@ export const Select = styled.select`
   border: none;
   border-radius: 8px;
   font-size: 16px;
-  width: 200px;
-  margin-bottom: 78px;
+  width: 180px;
+  position: relative;
+  top: -5px;
   outline: none;
-  color: white;
-  background-color: #2b1c24;
-
-`
+  color: ${secondaryColor};
+  background-color: ${primaryColor};
+`;

@@ -7,6 +7,6 @@ export const SectionBody = styled.section`
   height: 100%;
   flex-direction: column;
   max-width: 1200px;
-  background: #1d0e15;
+  background: #CCC;
   
 `;

@@ -1,4 +1,4 @@
-import { Form, BoxField, InputField, Span, ButtonSearch, CustomDatePicker, BoxFields, Select } from '../style/FilterTransferStyle'
+import { Form, BoxField, InputField, Span, ButtonSearch, CustomDatePicker, Select } from '../style/FilterTransferStyle'
 import { useState } from 'react'
 import axios from 'axios'
 import { useTransfersContext } from '../contexts/Transferencs'
@@ -83,29 +83,20 @@ export const FilterTransfer = () => {
      }
 
     return <Form>
-         <BoxFields>
-            <BoxField>
-                <Select value={type} onChange={(e) => setType(e.target.value)}>
-                    <option value="">Tipo de operação</option>
-                    <option value="DEPOSITO"> Depósito </option>
-                    <option value="SAQUE"> Saque </option>
-                    <option value="TRANSFERENCIA"> Transferência </option>
-                </Select>
-            </BoxField>
             <BoxField>
                 <InputField required
                     value={numberAccount}
                     onChange={e => setNumberAccount(e.target.value)}
                 />
-                <Span> * Numero da conta bancária </Span>
+                <Span> * Numero da conta </Span>
             </BoxField>
             <BoxField>
-                <ButtonSearch onClick={handleSearch}>
-                    Pesquisar
-                </ButtonSearch>
+                <InputField 
+                    value={transactionOperatorName}
+                    onChange={e => setTtransactionOperatorName(e.target.value)}
+                />
+                <Span> Nome do operador </Span>
             </BoxField>
-        </BoxFields>
-        <BoxFields>
             <BoxField>
                 <CustomDatePicker selected={startDate} onChange={date => setStartDate(date)} dateFormat="dd/MM/yyyy" maxDate={new Date()} />
                 <Span> Data de inicio </Span>
@@ -115,15 +106,19 @@ export const FilterTransfer = () => {
                 <Span> Data de Fim </Span>
             </BoxField>
             <BoxField>
-                <InputField 
-                    value={transactionOperatorName}
-                    onChange={e => setTtransactionOperatorName(e.target.value)}
-                />
-                <Span> Nome do operador transacionado </Span>
+                <Select value={type} onChange={(e) => setType(e.target.value)}>
+                    <option value="">Tipo de operação</option>
+                    <option value="DEPOSITO"> Depósito </option>
+                    <option value="SAQUE"> Saque </option>
+                    <option value="TRANSFERENCIA"> Transferência </option>
+                </Select>
             </BoxField>
-        </BoxFields>
-
-       
+            <BoxField>
+                <ButtonSearch onClick={handleSearch}>
+                    Pesquisar
+                </ButtonSearch>
+            </BoxField>
+            
         <ToastContainer />
     </Form>
 }

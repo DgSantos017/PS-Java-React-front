@@ -1,5 +1,11 @@
 import styled from 'styled-components';
 
+const primaryColor = '#FFFFFF';
+const secondaryColor = '#6C757D';
+const accentColor = '#007BFF';
+const lightBackgroundColor = '#F2F2F2';
+const darkBackgroundColor = '#E5E5E5';
+
 export const ContainerReport = styled.div`
   display: flex;
   flex-direction: column;
@@ -9,7 +15,7 @@ export const ContainerReport = styled.div`
 export const BoxSaldo = styled.div`
   margin: 20px 0;
   text-align: center;
-  color: #CCC;
+  color: ${secondaryColor};
   font-weight: bold;
   font-size: 1.2rem;
 `;
@@ -19,27 +25,26 @@ export const BoxDados = styled.div`
   margin-bottom: 20px;
   overflow-x: auto;
   height: 450px;
-  
 `;
 
 export const Table = styled.table`
   width: 100%;
   border-collapse: collapse;
-  overflow-y: auto; 
+  overflow-y: auto;
 `;
 
 export const TableHeader = styled.th`
   padding: 10px;
-  background-color: #0e0005;
-  color: #CCC;
+  background-color: ${darkBackgroundColor};
+  color: ${secondaryColor};
   padding: 30px 0 5px 0;
 `;
 
 export const TableData = styled.td<{ oddRow: boolean }>`
   padding: 10px;
   text-align: center;
-  background-color: ${(props) => (props.oddRow ? '#2b1c24' : '#1d0e15')};
-  color: #CCC;
+  background-color: ${(props) => (props.oddRow ? darkBackgroundColor : lightBackgroundColor)};
+  color: ${secondaryColor};
 `;
 
 export const BoxPaginacao = styled.div`
@@ -51,8 +56,8 @@ export const BoxPaginacao = styled.div`
 export const Button = styled.button`
   margin: 5px;
   padding: 5px 10px;
-  background-color: #007bff;
-  color: white;
+  background-color: ${accentColor};
+  color: ${primaryColor};
   border: none;
   cursor: pointer;
 `;
