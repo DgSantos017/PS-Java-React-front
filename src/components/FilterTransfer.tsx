@@ -1,7 +1,7 @@
 import { Form, BoxField, InputField, Span, ButtonSearch, CustomDatePicker } from '../style/FilterTransferStyle'
 import { useState } from 'react'
 import axios from 'axios'
-import { useTransfersContext } from '../contexts/Transferencs';
+import { useTransfersContext } from '../contexts/Transferencs'
 import { format } from 'date-fns'
 import "react-datepicker/dist/react-datepicker.css"
 
@@ -9,8 +9,8 @@ export const FilterTransfer = () => {
 
     const { setData } = useTransfersContext()
 
-     const [startDate, setStartDate] = useState('')
-     const [endDate, setEndDate] = useState('')
+     const [startDate, setStartDate] = useState<Date | null>(null)
+     const [endDate, setEndDate] = useState<Date | null>(null)
      const [transactionOperatorName, setTtransactionOperatorName] = useState('')
      const [numberAccount, setNumberAccount] = useState('')
      
@@ -20,8 +20,9 @@ export const FilterTransfer = () => {
      const handleSearch = async (event: any) => {
         event.preventDefault();
 
-        const formattedStartDate = format(new Date(startDate), 'yyyy-MM-dd\'T\'HH:mm:ss');
-        const formattedEndDate = format(new Date(endDate), 'yyyy-MM-dd\'T\'HH:mm:ss');
+        const formattedStartDate = startDate ? format(startDate, 'yyyy-MM-dd\'T\'HH:mm:ss') : '';
+        const formattedEndDate = endDate ? format(endDate, 'yyyy-MM-dd\'T\'HH:mm:ss') : '';
+
 
         await axios.get(`${urlDeploy}${numberAccount}`, { 
             params: { startDate: formattedStartDate, endDate: formattedEndDate, transactionOperatorName } 
