@@ -11,7 +11,7 @@ export const CustomDatePicker = styled(DatePicker)`
   border: none;
   border-radius: 8px;
   font-size: 16px;
-  width: 85px;
+  width: 150px;
   outline: none;
   background-color: ${primaryColor};
   padding-left: 10px;
@@ -47,7 +47,7 @@ export const InputField = styled.input`
   border: none;
   border-radius: 8px;
   font-size: 16px;
-  width: 100px;
+  width: 150px;
   outline: none;
   background-color: ${primaryColor};
   padding-left: 10px;
@@ -59,7 +59,7 @@ export const InputField = styled.input`
 export const ButtonSearch = styled.button`
   display: inline-block;
   padding: 12px 24px;
-  background-color: ${accentColor};
+  background-color: #6b8e23;
   color: ${primaryColor};
   border: none;
   border-radius: 8px;
@@ -73,10 +73,11 @@ export const Select = styled.select`
   border: none;
   border-radius: 8px;
   font-size: 16px;
-  width: 180px;
-  position: relative;
-  top: -5px;
+  width: 150px;
   outline: none;
-  color: ${secondaryColor};
   background-color: ${primaryColor};
+  padding-left: 10px;
+  color: ${secondaryColor};
+  margin-bottom: 10px;
+  text-align: center;
 `;

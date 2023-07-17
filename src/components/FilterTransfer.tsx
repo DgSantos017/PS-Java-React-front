@@ -106,12 +106,14 @@ export const FilterTransfer = () => {
                 <Span> Data de Fim </Span>
             </BoxField>
             <BoxField>
+                
                 <Select value={type} onChange={(e) => setType(e.target.value)}>
-                    <option value="">Tipo de operação</option>
+                    <option value=""> Todos </option>
                     <option value="DEPOSITO"> Depósito </option>
                     <option value="SAQUE"> Saque </option>
                     <option value="TRANSFERENCIA"> Transferência </option>
                 </Select>
+                <Span> Tipo de operação </Span>
             </BoxField>
             <BoxField>
                 <ButtonSearch onClick={handleSearch}>
