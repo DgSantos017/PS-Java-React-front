@@ -1,7 +1,7 @@
-import { createContext, useContext, useState } from 'react'
+import { createContext, useContext, useState, ReactNode } from 'react'
 
 interface TransfersContextType {
-  data: any[]
+  data: any[];
   setData: React.Dispatch<React.SetStateAction<any[]>>
 }
 
@@ -14,8 +14,12 @@ export const useTransfersContext = () => {
   return useContext(TransfersContext)
 };
 
-export const TransfersProvider = ({ children }) => {
-  const [data, setData] = useState([]);
+interface TransfersProviderProps {
+  children: ReactNode;
+}
+
+export const TransfersProvider = ({ children }: TransfersProviderProps) => {
+  const [data, setData] = useState<any[]>([])
 
   return (
     <TransfersContext.Provider value={{ data, setData }}>
@@ -23,5 +27,4 @@ export const TransfersProvider = ({ children }) => {
     </TransfersContext.Provider>
   )
 }
-
 
