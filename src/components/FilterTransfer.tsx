@@ -30,6 +30,14 @@ export const FilterTransfer = () => {
             })
             return
         }
+
+        if (startDate && endDate && startDate > endDate) {
+            toast.error('A data de início não pode ser maior que a data de fim!', {
+              position: 'top-center',
+              autoClose: 3000
+            })
+            return
+          }
         
 
         const formattedStartDate = startDate ? format(startDate, 'yyyy-MM-dd\'T\'HH:mm:ss') : ''
