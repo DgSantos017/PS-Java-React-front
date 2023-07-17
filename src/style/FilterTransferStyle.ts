@@ -5,10 +5,14 @@ import 'react-datepicker/dist/react-datepicker.css'
 export const CustomDatePicker = styled(DatePicker)`
   padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 8px;
   font-size: 16px;
   width: 200px;
   outline: none;
+  background-color: #954491;
+  padding-left: 10px;
+  color: white;
+  margin-bottom: 10px;
 `;
 
 export const Form = styled.form`
@@ -16,7 +20,7 @@ export const Form = styled.form`
   justify-content: space-around;
   width: 100%;
   padding: 50px 0;
-  
+  margin-bottom: -30px;
 `;
 
 export const BoxField = styled.section`
@@ -31,24 +35,29 @@ export const Span = styled.label`
  
 margin-top: 10px;
 position: relative;
-top: -70px;
+top: -80px;
+color: white;
 `;
 
 export const InputField = styled.input`
 padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 8px;
   font-size: 16px;
   width: 200px;
   outline: none;
+  background-color: #954491;
+  padding-left: 10px;
+  color: white;
+  margin-bottom: 10px;
 `;
 export const ButtonSearch = styled.button`
 display: inline-block;
 padding: 12px 24px;
-background-color: #4CAF50;
+background-color: #711f6e;
 color: white;
 border: none;
-border-radius: 4px;
+border-radius: 8px;
 font-size: 16px;
 cursor: pointer;
 transition: background-color 0.3s ease;
@@ -62,10 +71,13 @@ export const BoxFields = styled.section`
 export const Select = styled.select`
   padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 8px;
   font-size: 16px;
   width: 200px;
   margin-bottom: 78px;
   outline: none;
+  background-color: #CCC;
+  color: white;
+  background-color: #954491;
 
 `
