@@ -10,8 +10,8 @@ export const FilterTransfer = () => {
 
     const { setData } = useTransfersContext();
 
-     const [startDate, setStartDate] = useState(new Date())
-     const [endDate, setEndDate] = useState(new Date())
+     const [startDate, setStartDate] = useState('')
+     const [endDate, setEndDate] = useState('')
      const [transactionOperatorName, setTtransactionOperatorName] = useState('')
      const [numberAccount, setNumberAccount] = useState('')
      
