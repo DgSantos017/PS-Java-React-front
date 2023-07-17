@@ -54,7 +54,18 @@ cursor: pointer;
 transition: background-color 0.3s ease;
 `;
 
-export const LadoEsquerdo = styled.section`
+export const BoxFields = styled.section`
     display: flex;
     flex-direction: column;
 `;
+
+export const Select = styled.select`
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 200px;
+  margin-bottom: 78px;
+  outline: none;
+
+`

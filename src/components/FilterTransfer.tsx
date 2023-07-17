@@ -1,4 +1,4 @@
-import { Form, BoxField, InputField, Span, ButtonSearch, CustomDatePicker, LadoEsquerdo } from '../style/FilterTransferStyle'
+import { Form, BoxField, InputField, Span, ButtonSearch, CustomDatePicker, BoxFields, Select } from '../style/FilterTransferStyle'
 import { useState } from 'react'
 import axios from 'axios'
 import { useTransfersContext } from '../contexts/Transferencs'
@@ -51,7 +51,7 @@ export const FilterTransfer = () => {
      }
 
     return <Form>
-        <LadoEsquerdo>
+        <BoxFields>
             <BoxField>
                 <CustomDatePicker selected={startDate} onChange={date => setStartDate(date)} />
                 <Span> Data de inicio </Span>
@@ -67,15 +67,16 @@ export const FilterTransfer = () => {
                 />
                 <Span> Nome do operador transacionado </Span>
             </BoxField>
-        </LadoEsquerdo>
+        </BoxFields>
 
-        <LadoEsquerdo>
+        <BoxFields>
             <BoxField>
-                <InputField
-                    value={type}
-                    onChange={e => setType(e.target.value)}
-                />
-                <Span> Tipo de Operação </Span>
+                <Select value={type} onChange={(e) => setType(e.target.value)}>
+                    <option value="">Tipo de operação</option>
+                    <option value="DEPOSITO"> Depósito </option>
+                    <option value="SAQUE"> Saque </option>
+                    <option value="TRANSFERENCIA"> Transferência </option>
+                </Select>
             </BoxField>
             <BoxField>
                 <InputField required
@@ -89,6 +90,6 @@ export const FilterTransfer = () => {
                     Pesquisar
                 </ButtonSearch>
             </BoxField>
-        </LadoEsquerdo>
+        </BoxFields>
     </Form>
 }
