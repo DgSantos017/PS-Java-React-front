@@ -18,6 +18,9 @@ export const BoxSaldo = styled.div`
   color: ${secondaryColor};
   font-weight: bold;
   font-size: 1.2rem;
+  background-color: ${lightBackgroundColor};
+  padding: 10px 30px;
+  border-radius: 20px;
 `;
 
 export const BoxDados = styled.div`
