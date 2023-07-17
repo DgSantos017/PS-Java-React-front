@@ -4,8 +4,7 @@ import { useTransfersContext } from '../contexts/Transferencs'
 export const ReportTransfer = () => {
 
     const { data } = useTransfersContext()
-    console.log('HERE', )
-    console.log('HERE', data)
+    
     return data.length > 0 ? (
         <ContainerReport>
           <BoxSaldo>

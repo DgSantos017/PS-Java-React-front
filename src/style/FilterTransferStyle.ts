@@ -4,15 +4,16 @@ import 'react-datepicker/dist/react-datepicker.css'
 
 export const CustomDatePicker = styled(DatePicker)`
   padding: 10px;
-  border: 1px solid #ccc;
+  border: none;
   border-radius: 8px;
   font-size: 16px;
   width: 200px;
   outline: none;
-  background-color: #954491;
+  background-color: #2b1c24;
   padding-left: 10px;
   color: white;
   margin-bottom: 10px;
+  text-align: center;
 `;
 
 export const Form = styled.form`
@@ -41,21 +42,22 @@ color: white;
 
 export const InputField = styled.input`
 padding: 10px;
-  border: 1px solid #ccc;
+  border: none;
   border-radius: 8px;
   font-size: 16px;
   width: 200px;
   outline: none;
-  background-color: #954491;
+  background-color: #2b1c24;
   padding-left: 10px;
   color: white;
   margin-bottom: 10px;
+  text-align: center;
 `;
 export const ButtonSearch = styled.button`
 display: inline-block;
 padding: 12px 24px;
-background-color: #711f6e;
-color: white;
+background-color: #CCC;
+color: #0e0005;
 border: none;
 border-radius: 8px;
 font-size: 16px;
@@ -70,14 +72,13 @@ export const BoxFields = styled.section`
 
 export const Select = styled.select`
   padding: 10px;
-  border: 1px solid #ccc;
+  border: none;
   border-radius: 8px;
   font-size: 16px;
   width: 200px;
   margin-bottom: 78px;
   outline: none;
-  background-color: #CCC;
   color: white;
-  background-color: #954491;
+  background-color: #2b1c24;
 
 `

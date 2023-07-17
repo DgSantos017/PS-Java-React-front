@@ -30,14 +30,15 @@ export const Table = styled.table`
 
 export const TableHeader = styled.th`
   padding: 10px;
-  background-color: #5f0d5d;
+  background-color: #0e0005;
   color: #CCC;
+  padding: 30px 0 5px 0;
 `;
 
 export const TableData = styled.td<{ oddRow: boolean }>`
   padding: 10px;
   text-align: center;
-  background-color: ${(props) => (props.oddRow ? '#711f6e' : '#833280')};
+  background-color: ${(props) => (props.oddRow ? '#2b1c24' : '#1d0e15')};
   color: #CCC;
 `;
 
