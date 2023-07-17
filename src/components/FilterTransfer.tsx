@@ -24,14 +24,14 @@ export const FilterTransfer = () => {
         const formattedStartDate = startDate ? format(startDate, 'yyyy-MM-dd\'T\'HH:mm:ss') : ''
         const formattedEndDate = endDate ? format(endDate, 'yyyy-MM-dd\'T\'HH:mm:ss') : ''
 
-        const params: { [key: string]: string } = {};
+        const params: { [key: string]: string } = {}
 
         if (formattedStartDate) {
-            params.startDate = formattedStartDate;
+            params.startDate = formattedStartDate
         }
 
         if (formattedEndDate) {
-            params.endDate = formattedEndDate;
+            params.endDate = formattedEndDate
         }
 
         if (transactionOperatorName) {

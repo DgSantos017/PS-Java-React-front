@@ -3,10 +3,9 @@ import { useTransfersContext } from '../contexts/Transferencs'
 
 export const ReportTransfer = () => {
 
-    const { data } = useTransfersContext();
-    console.log(data)
+    const { data } = useTransfersContext()
 
-    return <ContainerReport>
+    return data.length > 0 ? <ContainerReport>
         <BoxSaldo>
             <Info> Saldo no total: 50 </Info>
             <Info> Saldo no periodo: 50 </Info>
@@ -34,5 +33,5 @@ export const ReportTransfer = () => {
             <Button> 3 </Button> 
             <Button> &gt; </Button>
         </BoxPaginacao>
-    </ContainerReport>
+    </ContainerReport> : null
 }
