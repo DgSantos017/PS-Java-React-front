@@ -4,12 +4,13 @@ import { useTransfersContext } from '../contexts/Transferencs'
 export const ReportTransfer = () => {
 
     const { data } = useTransfersContext()
-
+    console.log('HERE', )
+    console.log('HERE', data)
     return data.length > 0 ? (
         <ContainerReport>
           <BoxSaldo>
-            <p>Saldo no total:   R$ 50</p>
-            <p>Saldo no período: R$ 50</p>
+            <p>Saldo no total:   R$ {data[0].balanceInPeriod}</p>
+            <p>Saldo no período: R$ {data[0].totalBalance}</p>
           </BoxSaldo>
           <BoxDados>
             <Table>
