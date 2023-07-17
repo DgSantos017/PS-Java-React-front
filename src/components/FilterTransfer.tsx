@@ -4,6 +4,8 @@ import axios from 'axios'
 import { useTransfersContext } from '../contexts/Transferencs'
 import { format } from 'date-fns'
 import 'react-datepicker/dist/react-datepicker.css'
+import 'react-toastify/dist/ReactToastify.css'
+import { ToastContainer, toast } from 'react-toastify'
 
 export const FilterTransfer = () => {
 
@@ -20,6 +22,15 @@ export const FilterTransfer = () => {
      
      const handleSearch = async (event: any) => {
         event.preventDefault()
+
+        if (!numberAccount) {
+            toast.error('O número da conta é obrigatório!', {
+              position: 'top-center',
+              autoClose: 3000
+            })
+            return
+        }
+        
 
         const formattedStartDate = startDate ? format(startDate, 'yyyy-MM-dd\'T\'HH:mm:ss') : ''
         const formattedEndDate = endDate ? format(endDate, 'yyyy-MM-dd\'T\'HH:mm:ss') : ''
@@ -44,7 +55,20 @@ export const FilterTransfer = () => {
 
         try {
             const response = await axios.get(`${urlDeploy}${numberAccount}`, { params: params })
-            setData(response.data);
+            setData(response.data)
+
+            if (response.data.length === 0) {
+                toast.error('Nenhuma transaferência encontrada para os filtros informados!', {
+                  position: 'top-center',
+                  autoClose: 3000
+                })
+              } else {
+                toast.success('Dados atualizados com sucesso!', {
+                  position: 'top-center',
+                  autoClose: 3000
+                })
+              }
+
           } catch (error) {
             console.log('ERRO: ', error)
         }
@@ -91,5 +115,6 @@ export const FilterTransfer = () => {
                 </ButtonSearch>
             </BoxField>
         </BoxFields>
+        <ToastContainer />
     </Form>
 }
