@@ -75,25 +75,7 @@ export const FilterTransfer = () => {
      }
 
     return <Form>
-        <BoxFields>
-            <BoxField>
-                <CustomDatePicker selected={startDate} onChange={date => setStartDate(date)} />
-                <Span> Data de inicio </Span>
-            </BoxField>
-            <BoxField>
-                <CustomDatePicker selected={endDate} onChange={date => setEndDate(date)} />
-                <Span> Data de Fim </Span>
-            </BoxField>
-            <BoxField>
-                <InputField 
-                    value={transactionOperatorName}
-                    onChange={e => setTtransactionOperatorName(e.target.value)}
-                />
-                <Span> Nome do operador transacionado </Span>
-            </BoxField>
-        </BoxFields>
-
-        <BoxFields>
+         <BoxFields>
             <BoxField>
                 <Select value={type} onChange={(e) => setType(e.target.value)}>
                     <option value="">Tipo de operação</option>
@@ -115,6 +97,25 @@ export const FilterTransfer = () => {
                 </ButtonSearch>
             </BoxField>
         </BoxFields>
+        <BoxFields>
+            <BoxField>
+                <CustomDatePicker selected={startDate} onChange={date => setStartDate(date)} />
+                <Span> Data de inicio </Span>
+            </BoxField>
+            <BoxField>
+                <CustomDatePicker selected={endDate} onChange={date => setEndDate(date)} />
+                <Span> Data de Fim </Span>
+            </BoxField>
+            <BoxField>
+                <InputField 
+                    value={transactionOperatorName}
+                    onChange={e => setTtransactionOperatorName(e.target.value)}
+                />
+                <Span> Nome do operador transacionado </Span>
+            </BoxField>
+        </BoxFields>
+
+       
         <ToastContainer />
     </Form>
 }
