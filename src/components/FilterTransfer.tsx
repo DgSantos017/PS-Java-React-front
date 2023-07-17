@@ -3,19 +3,18 @@ import { useState } from 'react'
 import axios from 'axios'
 import { useTransfersContext } from '../contexts/Transferencs';
 import { format } from 'date-fns'
-import DatePicker from "react-datepicker"
 import "react-datepicker/dist/react-datepicker.css"
 
 export const FilterTransfer = () => {
 
-    const { setData } = useTransfersContext();
+    const { setData } = useTransfersContext()
 
      const [startDate, setStartDate] = useState('')
      const [endDate, setEndDate] = useState('')
      const [transactionOperatorName, setTtransactionOperatorName] = useState('')
      const [numberAccount, setNumberAccount] = useState('')
      
-     const urlLocal = 'http://localhost:8080/transfers/'
+    //  const urlLocal = 'http://localhost:8080/transfers/'
      const urlDeploy = 'https://ps-java-react-production.up.railway.app/transfers/'
      
      const handleSearch = async (event: any) => {
@@ -41,7 +40,7 @@ export const FilterTransfer = () => {
             <Span> Data de inicio </Span>
         </BoxField>
         <BoxField>
-            <CustomDatePicker selected={endDate} onChange={(date) => setStartDate(date)} />
+            <CustomDatePicker selected={endDate} onChange={(date) => setEndDate(date)} />
             <Span> Data de Fim </Span>
         </BoxField>
         <BoxField>
