@@ -4,7 +4,6 @@ import 'react-datepicker/dist/react-datepicker.css';
 
 const primaryColor = '#EDEDED';
 const secondaryColor = '#6C757D';
-const accentColor = '#007BFF';
 
 export const CustomDatePicker = styled(DatePicker)`
   padding: 10px;

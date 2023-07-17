@@ -1,10 +1,10 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
-const primaryColor = '#FFFFFF';
-const secondaryColor = '#6C757D';
-const accentColor = '#007BFF';
-const lightBackgroundColor = '#F2F2F2';
-const darkBackgroundColor = '#E5E5E5';
+const primaryColor = '#FFFFFF'
+const secondaryColor = '#6C757D'
+const accentColor = '#007BFF'
+const lightBackgroundColor = '#F2F2F2'
+const darkBackgroundColor = '#E5E5E5'
 
 export const ContainerReport = styled.div`
   display: flex;
