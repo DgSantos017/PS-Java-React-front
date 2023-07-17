@@ -21,6 +21,7 @@ export const CustomDatePicker = styled(DatePicker)`
 
 export const Form = styled.form`
   display: flex;
+  flex-wrap: wrap; 
   justify-content: space-around;
   width: 100%;
   padding: 50px 0;
@@ -32,6 +33,7 @@ export const BoxField = styled.section`
   flex-direction: column;
   align-items: center;
   margin-top: 10px;
+  width: 200px; 
 `;
 
 export const Span = styled.label`
