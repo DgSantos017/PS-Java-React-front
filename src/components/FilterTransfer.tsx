@@ -99,11 +99,11 @@ export const FilterTransfer = () => {
         </BoxFields>
         <BoxFields>
             <BoxField>
-                <CustomDatePicker selected={startDate} onChange={date => setStartDate(date)} />
+                <CustomDatePicker selected={startDate} onChange={date => setStartDate(date)} dateFormat="dd/MM/yyyy" />
                 <Span> Data de inicio </Span>
             </BoxField>
             <BoxField>
-                <CustomDatePicker selected={endDate} onChange={date => setEndDate(date)} />
+                <CustomDatePicker selected={endDate} onChange={date => setEndDate(date)} dateFormat="dd/MM/yyyy"  />
                 <Span> Data de Fim </Span>
             </BoxField>
             <BoxField>
