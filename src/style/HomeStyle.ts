@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 
-export const SectionBody = styled.form`
+export const SectionBody = styled.section`
   display: flex;
   justify-content: space-around;
   margin: 0 auto;
-  height: 100vh;
+  height: 100%;
   flex-direction: column;
   max-width: 1200px;
   background: #CCC;

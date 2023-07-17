@@ -8,8 +8,8 @@ export const ReportTransfer = () => {
 
     return <ContainerReport>
         <BoxSaldo>
-            <Info> Saldo no total: {data.totalBalance} </Info>
-            <Info> Saldo no periodo: {data.balanceInPeriod} </Info>
+            <Info> Saldo no total: 50 </Info>
+            <Info> Saldo no periodo: 50 </Info>
         </BoxSaldo>
         <BoxDados>
             <TR>

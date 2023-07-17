@@ -4,6 +4,9 @@ export const ContainerReport = styled.section`
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    heigth: 100%;
+    padding: 50px 0;
 `;
 
 export const BoxSaldo = styled.section`
@@ -48,7 +51,6 @@ cursor: pointer;
 export const TR = styled.tr`
 
 `;
-
 
 export const TD = styled.td`
 

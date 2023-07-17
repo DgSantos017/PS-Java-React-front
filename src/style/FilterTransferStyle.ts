@@ -15,6 +15,7 @@ export const Form = styled.form`
   display: flex;
   justify-content: space-around;
   width: 100%;
+  padding: 50px 0;
   
 `;
 
@@ -22,6 +23,7 @@ export const BoxField = styled.section`
 display: flex;
 flex-direction: column;
 align-items: center;
+margin-top: 10px;
 
 `;
 
@@ -39,9 +41,6 @@ padding: 10px;
   font-size: 16px;
   width: 200px;
   outline: none;
- 
- 
-
 `;
 export const ButtonSearch = styled.button`
 display: inline-block;
@@ -53,6 +52,9 @@ border-radius: 4px;
 font-size: 16px;
 cursor: pointer;
 transition: background-color 0.3s ease;
+`;
 
-
+export const LadoEsquerdo = styled.section`
+    display: flex;
+    flex-direction: column;
 `;
