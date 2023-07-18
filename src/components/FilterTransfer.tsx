@@ -84,36 +84,36 @@ export const FilterTransfer = () => {
 
     return <Form>
             <BoxField>
+                <Span> <span style={{color: 'red'}}> * </span> Numero da conta </Span>
                 <InputField required
                     value={numberAccount}
                     onChange={e => setNumberAccount(e.target.value)}
                 />
-                <Span> * Numero da conta </Span>
             </BoxField>
             <BoxField>
+                <Span> Nome do operador </Span>
                 <InputField 
                     value={transactionOperatorName}
                     onChange={e => setTtransactionOperatorName(e.target.value)}
                 />
-                <Span> Nome do operador </Span>
             </BoxField>
             <BoxField>
+                <Span> Data de início </Span>
                 <CustomDatePicker selected={startDate} onChange={date => setStartDate(date)} dateFormat="dd/MM/yyyy" maxDate={new Date()} />
-                <Span> Data de inicio </Span>
             </BoxField>
             <BoxField>
-                <CustomDatePicker selected={endDate} onChange={date => setEndDate(date)} dateFormat="dd/MM/yyyy" maxDate={new Date()}  />
                 <Span> Data de Fim </Span>
+                <CustomDatePicker selected={endDate} onChange={date => setEndDate(date)} dateFormat="dd/MM/yyyy" maxDate={new Date()}  />
             </BoxField>
             <BoxField>
                 
+                <Span> Tipo de operação </Span>
                 <Select value={type} onChange={(e) => setType(e.target.value)}>
                     <option value=""> Todos </option>
                     <option value="DEPOSITO"> Depósito </option>
                     <option value="SAQUE"> Saque </option>
                     <option value="TRANSFERENCIA"> Transferência </option>
                 </Select>
-                <Span> Tipo de operação </Span>
             </BoxField>
             <BoxField>
                 <ButtonSearch onClick={handleSearch}>

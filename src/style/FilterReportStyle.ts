@@ -69,4 +69,7 @@ export const BoxTableHeader = styled.tr`
   padding: 5px;
   display: flex;
 `
-
+export const Boxthead = styled.thead`
+`
+export const Tbody = styled.tbody`
+`

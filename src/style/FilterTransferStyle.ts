@@ -6,17 +6,17 @@ const primaryColor = '#EDEDED'
 const secondaryColor = '#6C757D'
 
 export const CustomDatePicker = styled(DatePicker)`
-  padding: 10px;
+  padding: 2px 7px;
   border: none;
   border-radius: 8px;
   font-size: 16px;
   width: 150px;
   outline: none;
   background-color: ${primaryColor};
-  padding-left: 10px;
   color: ${secondaryColor};
   margin-bottom: 10px;
-  text-align: center;
+  text-align: left;
+  height: 35px;
 `;
 
 export const Form = styled.form`
@@ -31,54 +31,57 @@ export const Form = styled.form`
 export const BoxField = styled.section`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
+  justify-content: center;
   margin-top: 10px;
   width: 200px; 
 `;
 
 export const Span = styled.label`
-  margin-top: 10px;
-  position: relative;
-  top: -80px;
   color: ${secondaryColor};
+  margin-left: 2px;
 `;
 
 export const InputField = styled.input`
-  padding: 10px;
   border: none;
   border-radius: 8px;
   font-size: 16px;
   width: 150px;
   outline: none;
   background-color: ${primaryColor};
-  padding-left: 10px;
+  padding: 2px 7px;
   color: ${secondaryColor};
   margin-bottom: 10px;
-  text-align: center;
+  text-align: left;
+  height: 35px;
 `;
 
 export const ButtonSearch = styled.button`
-  display: inline-block;
-  padding: 12px 24px;
+  display: flex;
   background-color: #6b8e23;
+  justify-content: center;
+  align-items: center;
   color: ${primaryColor};
   border: none;
   border-radius: 8px;
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  height: 40px;
+  width: 150px;
+  margin-top: 5px;
 `;
 
 export const Select = styled.select`
-  padding: 10px;
+  padding: 2px 7px;
   border: none;
   border-radius: 8px;
   font-size: 16px;
   width: 150px;
   outline: none;
   background-color: ${primaryColor};
-  padding-left: 10px;
   color: ${secondaryColor};
   margin-bottom: 10px;
-  text-align: center;
+  text-align: left;
+  height: 40px;
 `;

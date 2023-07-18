@@ -1,4 +1,4 @@
-import { ContainerReport, BoxDados, BoxSaldo, TableData, TableHeader, Table, BoxTableHeader } from '../style/FilterReportStyle'
+import { ContainerReport, BoxDados, BoxSaldo, TableData, TableHeader, Table, BoxTableHeader, Boxthead, Tbody } from '../style/FilterReportStyle'
 import { useTransfersContext } from '../contexts/Transferencs'
 import { format } from 'date-fns'
 
@@ -14,15 +14,15 @@ export const ReportTransfer = () => {
           </BoxSaldo>
           <BoxDados>
             <Table>
-              <thead>
+              <Boxthead>
                 <BoxTableHeader>
                   <TableHeader> Data e Hora </TableHeader>
                   <TableHeader> Valor </TableHeader>
                   <TableHeader> Tipo </TableHeader>
                   <TableHeader> Nome do operador </TableHeader>
                 </BoxTableHeader>
-              </thead>
-              <tbody>
+              </Boxthead>
+              <Tbody>
                 {data.map((item, index) => (
                   <tr key={item.id}>
                     <TableData oddRow={index % 2 === 0}>
@@ -33,7 +33,7 @@ export const ReportTransfer = () => {
                     <TableData oddRow={index % 2 === 0}>{item.transactionOperatorName}</TableData>
                   </tr>
                 ))}
-              </tbody>
+              </Tbody>
             </Table>
           </BoxDados>
         </ContainerReport>
