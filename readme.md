@@ -1,53 +1,80 @@
-# Deploy
+## Link da aplicação em Deploy
 https://ps-java-react-front.vercel.app/
 
-![Alt text](image.png)
-# Processo Seletivo Java
+![Alt text](image-1.png)
+# PS JAVA React
 
 ## Descrição 
 
-- Este teste consiste em construir uma camada de serviço, para uma operação muito realizada em bancos, para emissão de extrato bancário.
+- Este é um sistema para emissão de extrato bancário, onde você tem acesso a um relatório de suas movimentações financeiras.
+
+voce filtrar por:
+ - Periodo de datas(início de fim de uma movimentação)
+ - Nome do operador transacional
+ - Tipo de operação ( Saque, Transferência ou Depósito)
+ - se nenhum filtro for informado, ele exibe todas as movimentações pela número da sua conta
+ - se todos os filtros forem informados(Datas de início/fim, operador e tipo de operação) será exibido as transferências baseado nas datas e nome do operador
 
 
-## Como executar a aplicação 
-
-- Você pode executar a aplicação da maneira que quiser e utilizando a IDE de sua preferência. 
-- Caso queira executar a aplicação via linha de comando, execute primeiramente o comando:
-
-                   ./mvnw clean package  para linux.
-
-                   .\mvnw clean package  para windows.
-- Após isso execute o comando: 
-
-                             java -jar <...caminhoParaSeuJar>
 
 ## Requisitos de sistema
 
-- Possuir a JDK 11 
-- Uma IDE ou editor de sua preferência
+- Ter instalado o Node.js
+- um gerenciador de depêndencia (NPM ou Yarn)
 
-## Requisitos do Projeto
+## Como executar a aplicação Localmente 
 
-- A sua api deve fornecer os dados de transferência de acordo com o número da conta bacária.
-- Caso não seja informado nenhum filtro, retornar  todos os dados de transferência.
-- Caso seja informado um período de tempo, retornar todas as transferências relacionadas à aquele período de tempo.
-- Caso seja informado o nome do operador da transação, retornar todas as transferências relacionados à aquele operador.
-- Caso todos os filtros sejam informados, retornar todas as transferências com base no período de tempo informado e o nome do operador.
-- Operador de transação nada mais é que, o nome do responsável de destino da transação caso seja uma operação de transferência de saida ou o nome do responsável de onde se originou a transação caso seja uma operação de transferência de entrada.
-- Os valores devem ser de ponto flutuante, e deve-se considerar apenas duas casas decimais.
-- O frontend deve seguir como exemplo o protótipo informado no documento do processo seletivo.
-- No frontend o usuário deve ser capaz de informar um período de tem e/ou nome do operador da transasção como filtros para buscar as transações.
-- As transações devem ser exibidas junto com o saldo total e o saldo total no período de acordo com o protótipo do documento.
+- Faça o Fork desse repositório em sua conta do github
+![Alt text](image-2.png)
 
-## O que iremos avaliar
-- Cumprimento dos requisitos
-- Qualidade do projeto de API e fluidez da DX
-- Organização do código e boas práticas
-- Domínio das linguagens, bibliotecas e ferramentas utilizadas
-- Organização dos commits
-- Escrita e cobertura de testes
+- em sua máquina, abra um terminal e faça o clone da aplicação
+#### Com  HTTPS
+   
+```
+https://github.com/DgSantos017/PS-Java-React-front.git
+```
 
-## Sobre a entrega
-- Utilizar o padrão RESTFul para a construção da sua API.
-- Existe um script sql no pacote resources que cotém a modelagem do banco que pode ser seguida, e valores iniciais.
-- Caso julge necessário você poderá criar mais tablas, porém a estrutura inicial não deve ser alterada.
+#### ou com  SSH
+```
+git@github.com:DgSantos017/PS-Java-React-front.git
+```
+- Entre no diretório da aplicação
+```
+cd PS-Java-React-front
+```
+- instale as dependências 
+## obs. aqui vou usar o Yarn mas poderia ser também com NPM
+   
+```
+yarn
+```
+
+Inicie a aplicação:
+```
+yarn vite
+```
+
+Se todos os passos forem executados corretamente, a aplicação vai rodar nesse endereço:
+http://localhost:5173/
+
+![Alt text](image-3.png)
+
+# Libs ultilizadas além do React.js
+- Material-UI
+- react-toastify
+- Axios
+- react-datepicker
+- styled-components
+
+
+#### Meus contatos
+
+Linkedin
+https://www.linkedin.com/in/diogo-santos01/
+
+Gmail
+diogosantosferreira.01@gmail.com
+
+Watsapp: 98 988837650
+
+Thanksss :)
