@@ -25,7 +25,7 @@ export const Form = styled.form`
   justify-content: space-around;
   width: 100%;
   padding: 50px 0;
-  margin-bottom: -30px;
+  margin-bottom: 20px;
 `;
 
 export const BoxField = styled.section`
