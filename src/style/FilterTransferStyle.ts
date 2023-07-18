@@ -38,7 +38,7 @@ export const BoxField = styled.section`
 `;
 
 export const Span = styled.label`
-  color: ${secondaryColor};
+  color: rgb(50, 50, 50);
   margin-left: 2px;
 `;
 
@@ -70,6 +70,10 @@ export const ButtonSearch = styled.button`
   height: 40px;
   width: 150px;
   margin-top: 5px;
+
+  &:hover{
+    background-color: rgb(153 192 74);
+  }
 `;
 
 export const Select = styled.select`
@@ -85,3 +89,14 @@ export const Select = styled.select`
   text-align: left;
   height: 40px;
 `;
+
+export const DataNotFound = styled.h2`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  color: rgb(50, 50, 50);
+  font-weight: semi-bold;
+`
