@@ -43,7 +43,7 @@ git@github.com:DgSantos017/PS-Java-React-front.git
 cd PS-Java-React-front
 ```
 - instale as dependências 
-## obs. aqui vou usar o Yarn mas poderia ser também com NPM
+#### obs. aqui vou usar o Yarn mas poderia ser também com NPM
    
 ```
 yarn
