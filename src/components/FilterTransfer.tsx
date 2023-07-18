@@ -25,7 +25,7 @@ export const FilterTransfer = () => {
 
         if (!numberAccount) {
             toast.error('O número da conta é obrigatório!', {
-              position: 'top-center',
+              position: 'top-right',
               autoClose: 3000
             })
             return
@@ -33,7 +33,7 @@ export const FilterTransfer = () => {
 
         if (startDate && endDate && startDate > endDate) {
             toast.error('A data de início não pode ser maior que a data de fim!', {
-              position: 'top-center',
+              position: 'top-right',
               autoClose: 3000
             })
             return
@@ -67,12 +67,12 @@ export const FilterTransfer = () => {
 
             if (response.data.length === 0) {
                 toast.error('Nenhuma transaferência encontrada para os filtros informados!', {
-                  position: 'top-center',
+                  position: 'top-right',
                   autoClose: 3000
                 })
               } else {
                 toast.success('Dados atualizados com sucesso!', {
-                  position: 'top-center',
+                  position: 'top-right',
                   autoClose: 3000
                 })
               }
@@ -109,10 +109,10 @@ export const FilterTransfer = () => {
                 
                 <Span> Tipo de operação </Span>
                 <Select value={type} onChange={(e) => setType(e.target.value)}>
-                    <option value=""> Todos </option>
-                    <option value="DEPOSITO"> Depósito </option>
-                    <option value="SAQUE"> Saque </option>
-                    <option value="TRANSFERENCIA"> Transferência </option>
+                    <option value=''> Todos </option>
+                    <option value='DEPOSITO'> Depósito </option>
+                    <option value='SAQUE'> Saque </option>
+                    <option value='TRANSFERENCIA'> Transferência </option>
                 </Select>
             </BoxField>
             <BoxField>
@@ -121,6 +121,6 @@ export const FilterTransfer = () => {
                 </ButtonSearch>
             </BoxField>
             
-        <ToastContainer />
+        <ToastContainer position='top-right' />
     </Form>
 }

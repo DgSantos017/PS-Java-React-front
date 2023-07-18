@@ -26,6 +26,7 @@ export const Form = styled.form`
   width: 100%;
   padding: 50px 0;
   margin-bottom: 20px;
+  z-index: 2;
 `;
 
 export const BoxField = styled.section`
@@ -90,7 +91,7 @@ export const Select = styled.select`
   height: 40px;
 `;
 
-export const DataNotFound = styled.h2`
+export const DataInfo = styled.h2`
   width: 100%;
   height: 100%;
   display: flex;
@@ -99,4 +100,9 @@ export const DataNotFound = styled.h2`
   font-size: 22px;
   color: rgb(50, 50, 50);
   font-weight: semi-bold;
+`
+
+export const ContainerDataInfo = styled.section`
+display: flex;
+justify-content: center;
 `

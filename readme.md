@@ -18,8 +18,6 @@ voce filtrar por:
  - se nenhum filtro for informado, ele exibe todas as movimentações pela número da sua conta
  - se todos os filtros forem informados(Datas de início/fim, operador e tipo de operação) será exibido as transferências baseado nas datas e nome do operador
 
-
-
 ## Requisitos de sistema
 
 - Ter instalado o Node.js
