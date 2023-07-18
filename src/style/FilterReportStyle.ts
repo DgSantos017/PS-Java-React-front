@@ -12,22 +12,26 @@ export const ContainerReport = styled.div`
   align-items: center;
 `;
 
+export const BoxDados = styled.div`
+  width: 100%;
+  margin-bottom: 20px;
+  overflow-x: auto;
+  height: 550px;
+`;
+
 export const BoxSaldo = styled.div`
   margin: 20px 0;
   text-align: center;
   color: ${secondaryColor};
   font-weight: bold;
   font-size: 1.2rem;
-  background-color: ${lightBackgroundColor};
   padding: 10px 30px;
   border-radius: 20px;
-`;
+  display: flex;
 
-export const BoxDados = styled.div`
-  width: 100%;
-  margin-bottom: 20px;
-  overflow-x: auto;
-  height: 450px;
+  p{
+    margin: 0 70px;
+  }
 `;
 
 export const Table = styled.table`
@@ -36,24 +40,11 @@ export const Table = styled.table`
   overflow-y: auto;
 `;
 
-export const TableHeader = styled.th`
-  padding: 10px;
-  background-color: ${darkBackgroundColor};
-  color: ${secondaryColor};
-  padding: 30px 0 5px 0;
-`;
-
 export const TableData = styled.td<{ oddRow: boolean }>`
   padding: 10px;
   text-align: center;
   background-color: ${(props) => (props.oddRow ? darkBackgroundColor : lightBackgroundColor)};
   color: ${secondaryColor};
-`;
-
-export const BoxPaginacao = styled.div`
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
 `;
 
 export const Button = styled.button`
@@ -64,3 +55,18 @@ export const Button = styled.button`
   border: none;
   cursor: pointer;
 `;
+
+export const TableHeader = styled.th`
+  background-color: ${darkBackgroundColor};
+  color: ${secondaryColor};
+  padding: 12px 5px;
+  width: 100%;
+`;
+
+export const BoxTableHeader = styled.tr`
+  position: fixed;
+  width: 64%;
+  padding: 5px;
+  display: flex;
+`
+
